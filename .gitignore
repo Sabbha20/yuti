@@ -20,6 +20,7 @@ wheels/
 .coverage.*
 htmlcov/
 .mypy_cache/
+.ipynb_checkpoints/
 
 # Environment variables
 .env
@@ -32,5 +33,14 @@ htmlcov/
 
 # macOS
 .DS_Store
+
+# Local model and training artifacts
+*.pt
+*.pth
+*.bin
+*.ckpt
+checkpoints/
+outputs/
+logs/
 
 *.txt
