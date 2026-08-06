@@ -10,9 +10,10 @@ from a newline and free-writes.
 """
 
 import argparse
+
 import torch
 
-from model import YutiGPT
+from app.v1_char.model import YutiGPT
 
 
 def load_model(checkpoint_path):

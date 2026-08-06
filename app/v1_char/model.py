@@ -19,10 +19,10 @@ may attend to itself and the past, never the future.
 """
 
 import torch
-import torch.nn as nn
+from torch import nn
 from torch.nn import functional as F
 
-from config import config
+from app.v1_char.config import config
 
 
 class Head(nn.Module):
@@ -49,7 +49,7 @@ class Head(nn.Module):
         self.dropout = nn.Dropout(config["dropout"])
 
     def forward(self, x):
-        B, T, C = x.shape
+        _B, T, _C = x.shape
         k = self.key(x)     # (B, T, head_size)
         q = self.query(x)   # (B, T, head_size)
 

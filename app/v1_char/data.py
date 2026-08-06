@@ -21,7 +21,7 @@ class Dataset:
             text = f.read()
 
         # Vocabulary = every unique character in the corpus
-        self.chars = sorted(list(set(text)))
+        self.chars = sorted(set(text))
         self.vocab_size = len(self.chars)
 
         # Lookup tables: string<->int

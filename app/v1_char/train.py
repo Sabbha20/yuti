@@ -16,10 +16,10 @@ weights, its config, and the tokenizer vocab so generate.py can reload it.
 """
 
 import torch
-
 from config import config
-from data import Dataset
-from model import YutiGPT
+
+from app.v1_char.data import Dataset
+from app.v1_char.model import YutiGPT
 
 
 @torch.no_grad()
